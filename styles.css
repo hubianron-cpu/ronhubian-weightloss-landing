@@ -37,7 +37,7 @@ body {
   overflow-x: hidden;
   color: var(--ink);
   background: var(--vanilla);
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Assistant", Arial, sans-serif;
   line-height: 1.75;
   text-rendering: optimizeLegibility;
 }
@@ -74,7 +74,8 @@ h3 {
 
 h1,
 h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Assistant", Arial, sans-serif;
+  font-weight: 900;
 }
 
 .container {
@@ -99,10 +100,15 @@ h2 {
 }
 
 .site-header {
-  position: absolute;
-  inset: 0 0 auto;
-  z-index: 20;
-  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(14, 11, 9, 0.08);
 }
 
 .header-inner {
@@ -111,12 +117,12 @@ h2 {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 8px 10px 8px 14px;
-  border: 1px solid rgba(14, 11, 9, 0.1);
-  border-radius: 18px;
-  background: rgba(255, 250, 242, 0.76);
-  box-shadow: 0 10px 35px rgba(14, 11, 9, 0.07);
-  backdrop-filter: blur(14px);
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 0;
+  background: var(--white);
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .brand {
@@ -152,19 +158,20 @@ h2 {
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: 760px;
-  padding: 132px 0 82px;
+  min-height: 0;
+  padding: 70px 0 26px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 8% 20%, rgba(234, 214, 210, 0.82), transparent 26%),
-    linear-gradient(145deg, #fffaf2 0%, #f6eadb 56%, #f1e1cf 100%);
+    radial-gradient(circle at 9% 18%, rgba(255, 255, 255, 0.055), transparent 26%),
+    radial-gradient(circle at 90% 82%, rgba(194, 138, 85, 0.1), transparent 30%),
+    linear-gradient(145deg, #050505 0%, #0e0b09 56%, #16110e 100%);
 }
 
 .hero::before {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: radial-gradient(rgba(14, 11, 9, 0.07) 0.7px, transparent 0.7px);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 0.7px, transparent 0.7px);
   background-size: 18px 18px;
   content: "";
   opacity: 0.55;
@@ -194,6 +201,10 @@ h2 {
   text-transform: uppercase;
 }
 
+.hero .eyebrow {
+  color: var(--white);
+}
+
 .eyebrow::before {
   width: 26px;
   height: 1px;
@@ -205,9 +216,9 @@ h2 {
   max-width: 700px;
   margin-inline: auto;
   margin-bottom: 22px;
-  color: var(--chocolate);
+  color: var(--white);
   font-size: clamp(3rem, 13vw, 6.55rem);
-  font-weight: 500;
+  font-weight: 900;
 }
 
 .hero h1 span {
@@ -232,7 +243,7 @@ h2 {
 .hero-lead {
   max-width: 650px;
   margin: 0 auto 14px;
-  color: var(--chocolate);
+  color: var(--white);
   font-size: clamp(1.15rem, 4.8vw, 1.45rem);
   font-weight: 680;
   line-height: 1.55;
@@ -241,7 +252,7 @@ h2 {
 .hero-text {
   max-width: 610px;
   margin: 0 auto 28px;
-  color: var(--muted);
+  color: rgba(255, 253, 248, 0.72);
   font-size: 1rem;
 }
 
@@ -289,6 +300,14 @@ h2 {
   margin: 11px 0 0;
   color: var(--muted);
   font-size: 0.75rem;
+}
+
+.hero .cta-note {
+  color: rgba(255, 253, 248, 0.62);
+}
+
+.hero .micro-proof {
+  color: rgba(255, 253, 248, 0.72);
 }
 
 .micro-proof {
@@ -379,9 +398,9 @@ h2 {
 
 .book-content strong {
   color: var(--chocolate);
-  font-family: Georgia, serif;
+  font-family: "Assistant", Arial, sans-serif;
   font-size: clamp(1.8rem, 8vw, 2.65rem);
-  font-weight: 500;
+  font-weight: 900;
   line-height: 1.05;
 }
 
@@ -396,7 +415,7 @@ h2 {
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid rgba(191, 133, 81, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
@@ -419,11 +438,11 @@ h2 {
   align-items: center;
   gap: 8px;
   padding: 11px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
-  color: var(--chocolate);
-  background: rgba(255, 252, 246, 0.9);
-  box-shadow: var(--shadow-soft);
+  color: rgba(255, 253, 248, 0.82);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.2);
   font-size: 0.78rem;
   font-weight: 750;
   backdrop-filter: blur(10px);
@@ -456,7 +475,7 @@ h2 {
   left: -140px;
   width: 300px;
   height: 300px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.075);
 }
 
 .hero-glow-two {
@@ -464,7 +483,7 @@ h2 {
   bottom: -120px;
   width: 310px;
   height: 310px;
-  background: rgba(234, 214, 210, 0.55);
+  background: rgba(255, 255, 255, 0.055);
 }
 
 .section {
@@ -545,7 +564,7 @@ h2 {
   display: block;
   margin-bottom: 32px;
   color: var(--caramel);
-  font-family: Georgia, serif;
+  font-family: "Assistant", Arial, sans-serif;
   font-size: 0.86rem;
   font-style: italic;
 }
@@ -633,7 +652,7 @@ h2 {
   border-radius: 50%;
   color: var(--caramel);
   background: var(--cream);
-  font-family: Georgia, serif;
+  font-family: "Assistant", Arial, sans-serif;
   font-size: 0.78rem;
   font-style: italic;
 }
@@ -796,7 +815,7 @@ h2 {
 }
 
 .about-signature strong {
-  font-family: Georgia, serif;
+  font-family: "Assistant", Arial, sans-serif;
   font-size: 1.15rem;
   font-style: italic;
 }
@@ -1189,6 +1208,18 @@ h2 {
 }
 
 @media (max-width: 899px) {
+  .hero-copy,
+  .hero h1,
+  .hero-lead,
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero .eyebrow,
+  .hero .micro-proof {
+    justify-content: center;
+  }
+
   .pain-card,
   .feature-item,
   .trust-copy {
@@ -1225,7 +1256,7 @@ h2 {
   }
 
   .hero {
-    padding-top: 122px;
+    padding-top: 54px;
   }
 
   .floating-whatsapp {
@@ -1253,7 +1284,7 @@ h2 {
   }
 
   .hero {
-    padding-top: 140px;
+    padding-top: 82px;
   }
 
   .button {
@@ -1300,19 +1331,15 @@ h2 {
 }
 
 @media (min-width: 900px) {
-  .site-header {
-    padding-top: 24px;
-  }
-
   .brand-logo {
     height: 60px;
   }
 
   .hero {
     display: grid;
-    min-height: 820px;
+    min-height: 0;
     align-items: center;
-    padding: 135px 0 90px;
+    padding: 88px 0 34px;
   }
 
   .hero-grid {
@@ -1331,7 +1358,8 @@ h2 {
   }
 
   .hero h1 {
-    font-size: clamp(5.2rem, 8vw, 7rem);
+    font-size: clamp(4.8rem, 7.2vw, 6.4rem);
+    font-weight: 900;
   }
 
   .micro-proof {
@@ -1339,7 +1367,7 @@ h2 {
   }
 
   .hero-visual {
-    min-height: 570px;
+    min-height: 470px;
   }
 
   .book-card {
