@@ -452,8 +452,8 @@ h3 {
 }
 
 .note-bottom {
-  bottom: 8%;
-  left: 0;
+  bottom: -8%;
+  left: -4px;
 }
 
 .hero-glow {
@@ -1380,7 +1380,8 @@ h3 {
   }
 
   .note-bottom {
-    bottom: 13%;
+    bottom: -4%;
+    left: -8px;
   }
 
   .section-heading {
@@ -1965,7 +1966,8 @@ body {
 
 .brand-logo {
   width: clamp(142px, 17vw, 224px);
-  height: clamp(42px, 5vw, 58px);
+  height: clamp(40px, 5vw, 56px);
+  max-width: 48vw;
 }
 
 .header-cta,
@@ -2496,7 +2498,7 @@ body {
   }
 
   .brand-logo {
-    width: 136px;
+    width: 132px;
   }
 
   .header-cta {
