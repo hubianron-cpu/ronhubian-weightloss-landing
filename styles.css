@@ -49,7 +49,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: 0;
   overflow-x: hidden;
   color: var(--ink);
   background: var(--vanilla);
@@ -224,7 +224,7 @@ h3 {
 .hero-title-guarantee {
   width: fit-content;
   max-width: 100%;
-  margin-top: 12px;
+  margin: 0 auto clamp(24px, 3vw, 34px);
   margin-inline: auto;
   padding: 7px 18px 10px;
   border: 1px solid rgba(194, 138, 85, 0.32);
@@ -236,6 +236,16 @@ h3 {
   font-style: normal;
   font-weight: 900;
   line-height: 1.18;
+}
+
+.hero-intro {
+  max-width: 670px;
+  margin: 0 auto clamp(18px, 3vw, 28px);
+  color: var(--text-muted);
+  font-size: clamp(1.06rem, 4.5vw, 1.34rem);
+  font-weight: 750;
+  line-height: 1.48;
+  text-align: center;
 }
 
 .guarantee-copy h2 span {
@@ -2515,5 +2525,32 @@ body {
     width: 54px;
     justify-content: center;
     padding: 0;
+  }
+}
+
+.hero-intro {
+  max-width: 760px;
+  margin: 0 auto clamp(18px, 3vw, 28px);
+  color: #d9d9d9;
+}
+
+.hero-title-guarantee {
+  margin: 0 auto clamp(24px, 3vw, 34px);
+}
+
+@media (min-width: 900px) {
+  .hero-intro,
+  .hero-title-guarantee {
+    margin-inline: 0;
+  }
+
+  .hero-intro {
+    text-align: right;
+  }
+}
+
+@media (max-width: 899px) {
+  .hero-intro {
+    text-align: center;
   }
 }
