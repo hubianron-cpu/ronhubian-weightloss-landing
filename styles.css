@@ -1556,7 +1556,8 @@ body {
 .header-cta {
   border-color: rgba(247, 147, 26, 0.62);
   color: #ffffff;
-  background: rgba(247, 147, 26, 0.12);
+  background: linear-gradient(135deg, #f7931a 0%, #e67e00 100%);
+  box-shadow: 0 12px 30px rgba(247, 147, 26, 0.26);
 }
 
 .header-cta:hover,
