@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -426,7 +426,10 @@
               <img
                 src="./assets/ron-hubian-studio.jpg"
                 alt="רון חוביאן, מאמן כושר ויועץ תזונה"
+                width="720"
+                height="817"
                 loading="lazy"
+                decoding="async"
               />
             </div>
             <div class="about-signature">
@@ -497,42 +500,105 @@
             <p class="eyebrow">שאלות ותשובות</p>
             <h2>מה חשוב לדעת לפני שמתחילים?</h2>
           </div>
-          <div class="cards-grid">
-            <article class="card pain-card reveal">
-              <h3>האם התכנית כוללת ליווי באמצעות אפליקציה אישית?</h3>
-              <p>כן. כל מתאמן ומתאמנת מקבלים שימוש חופשי באפליקציה האישית לאורך התהליך כדי לרכז את התכנית, המשימות, המעקב וההתקדמות במקום אחד.</p>
+          <div class="faq-list reveal">
+            <article class="faq-item is-open">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-1" aria-expanded="true" aria-controls="faq-answer-1">
+                  האם התכנית כוללת ליווי באמצעות אפליקציה אישית?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
+                <p>כן. כל מתאמן ומתאמנת מקבלים שימוש חופשי באפליקציה האישית לאורך התהליך כדי לרכז את התכנית, המשימות, המעקב וההתקדמות במקום אחד.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>מה קורה אם לא אהבתם את התכנית?</h3>
-              <p>ההתחייבות להחזר מופיעה מראש בהסכם אישי ומסודר. אם תפעלו לפי התכנית, תעמדו בתנאים שנקבעו ולא תגיעו ליעד שהוגדר בהסכם - תקבלו החזר כספי מלא.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-2" aria-expanded="false" aria-controls="faq-answer-2">
+                  מה קורה אם לא אהבתם את התכנית?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
+                <p>ההתחייבות להחזר מופיעה מראש בהסכם אישי ומסודר. אם תפעלו לפי התכנית, תעמדו בתנאים שנקבעו ולא תגיעו ליעד שהוגדר בהסכם - תקבלו החזר כספי מלא.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>מה קורה אם לא הגעתי לתוצאות?</h3>
-              <p>אם עמדתם בהנחיות ובתנאים שנקבעו מראש ולא הגעתם ליעד שהוגדר בהסכם האישי - אני מתחייב להחזר כספי מלא.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-3" aria-expanded="false" aria-controls="faq-answer-3">
+                  מה קורה אם לא הגעתי לתוצאות?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
+                <p>אם עמדתם בהנחיות ובתנאים שנקבעו מראש ולא הגעתם ליעד שהוגדר בהסכם האישי - אני מתחייב להחזר כספי מלא.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>האם התכנית מתאימה גם למי שלא רוצים לרדת הרבה במשקל?</h3>
-              <p>כן. היא מתאימה גם למי שהמטרה שלהם היא לחטב את הגוף, להתחזק, לשפר את מראה אזור הבטן ולהרגיש טוב יותר עם עצמם.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-4" aria-expanded="false" aria-controls="faq-answer-4">
+                  האם התכנית מתאימה גם למי שלא רוצים לרדת הרבה במשקל?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
+                <p>כן. היא מתאימה גם למי שהמטרה שלהם היא לחטב את הגוף, להתחזק, לשפר את מראה אזור הבטן ולהרגיש טוב יותר עם עצמם.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>האם אפשר להגיע לבטן חטובה דרך התכנית?</h3>
-              <p>התכנית יכולה לעזור להפחית את אחוז השומן הכללי, לחזק את שרירי הגוף ולשפר את מראה אזור הבטן. אי אפשר לבחור מאיזה אזור הגוף יוריד שומן קודם.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-5" aria-expanded="false" aria-controls="faq-answer-5">
+                  האם אפשר להגיע לבטן חטובה דרך התכנית?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
+                <p>התכנית יכולה לעזור להפחית את אחוז השומן הכללי, לחזק את שרירי הגוף ולשפר את מראה אזור הבטן. אי אפשר לבחור מאיזה אזור הגוף יוריד שומן קודם.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>האם צריך לוותר על מתוקים, מסעדות ויציאות?</h3>
-              <p>לא. המטרה היא ללמוד איך לשלב אותם בצורה חכמה, בלי להפוך כל יציאה לאירוע שבו "הכול נהרס".</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-6" aria-expanded="false" aria-controls="faq-answer-6">
+                  האם צריך לוותר על מתוקים, מסעדות ויציאות?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
+                <p>לא. המטרה היא ללמוד איך לשלב אותם בצורה חכמה, בלי להפוך כל יציאה לאירוע שבו "הכול נהרס".</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>כמה פעמים בשבוע צריך להתאמן?</h3>
-              <p>הכמות נקבעת לפי המטרה, הרמה והזמן שיש לכם. נבנה תכנית ריאלית שתוכלו לבצע ולהתמיד בה.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-7" aria-expanded="false" aria-controls="faq-answer-7">
+                  כמה פעמים בשבוע צריך להתאמן?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-7" role="region" aria-labelledby="faq-question-7" hidden>
+                <p>הכמות נקבעת לפי המטרה, הרמה והזמן שיש לכם. נבנה תכנית ריאלית שתוכלו לבצע ולהתמיד בה.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>האם התכנית מתאימה למתחילים?</h3>
-              <p>כן. האימונים והתזונה מותאמים לנקודת ההתחלה שלכם ומתקדמים בהדרגה.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-8" aria-expanded="false" aria-controls="faq-answer-8">
+                  האם התכנית מתאימה למתחילים?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-8" role="region" aria-labelledby="faq-question-8" hidden>
+                <p>כן. האימונים והתזונה מותאמים לנקודת ההתחלה שלכם ומתקדמים בהדרגה.</p>
+              </div>
             </article>
-            <article class="card pain-card reveal">
-              <h3>מה קורה אם היה לי שבוע פחות מוצלח?</h3>
-              <p>לא מתחילים הכול מחדש. בודקים מה קרה, מבצעים התאמות וחוזרים לפעולה בצורה מסודרת.</p>
+            <article class="faq-item">
+              <h3>
+                <button class="faq-question" type="button" id="faq-question-9" aria-expanded="false" aria-controls="faq-answer-9">
+                  מה קורה אם היה לי שבוע פחות מוצלח?
+                  <span class="faq-icon" aria-hidden="true"></span>
+                </button>
+              </h3>
+              <div class="faq-answer" id="faq-answer-9" role="region" aria-labelledby="faq-question-9" hidden>
+                <p>לא מתחילים הכול מחדש. בודקים מה קרה, מבצעים התאמות וחוזרים לפעולה בצורה מסודרת.</p>
+              </div>
             </article>
           </div>
         </div>
