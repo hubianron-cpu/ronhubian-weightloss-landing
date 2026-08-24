@@ -7,6 +7,21 @@ document.querySelectorAll("[data-whatsapp]").forEach((link) => {
   link.href = whatsappUrl;
 });
 
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach((item) => {
+  const button = item.querySelector(".faq-question");
+  const answer = item.querySelector(".faq-answer");
+  if (!button || !answer) return;
+
+  button.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    answer.hidden = isOpen;
+    item.classList.toggle("is-open", !isOpen);
+  });
+});
+
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
