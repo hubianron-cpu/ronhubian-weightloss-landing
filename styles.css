@@ -1411,8 +1411,9 @@ h3 {
   }
 
   .note-top {
-    top: 2%;
-    right: 1%;
+    top: 14%;
+    right: 0;
+    transform: translateX(18%);
   }
 
   .note-bottom {
@@ -2436,6 +2437,13 @@ body {
 
   .hero-visual {
     min-height: 390px;
+  }
+
+  .note-top {
+    top: 8px;
+    right: 50%;
+    max-width: calc(100vw - 32px);
+    transform: translateX(50%);
   }
 
   .goal-card {
