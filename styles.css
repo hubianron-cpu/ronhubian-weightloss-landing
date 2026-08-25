@@ -2436,7 +2436,7 @@ body {
   }
 
   .hero-visual {
-    min-height: 390px;
+    min-height: 500px;
   }
 
   .note-top {
@@ -2484,6 +2484,12 @@ body {
   .faq-question {
     min-height: 58px;
     font-size: clamp(1.05rem, 4.8vw, 1.22rem);
+  }
+}
+
+@media (min-width: 620px) and (max-width: 899px) {
+  .hero-visual {
+    min-height: 600px;
   }
 }
 
