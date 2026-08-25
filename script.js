@@ -7,6 +7,41 @@ document.querySelectorAll("[data-whatsapp]").forEach((link) => {
   link.href = whatsappUrl;
 });
 
+const floatingWhatsapp = document.querySelector(".floating-whatsapp");
+const heroSection = document.querySelector(".hero");
+
+if (floatingWhatsapp && heroSection) {
+  let floatingWhatsappFrame;
+
+  const syncFloatingWhatsapp = () => {
+    const heroBounds = heroSection.getBoundingClientRect();
+    const shouldHide = heroBounds.bottom > 0 && heroBounds.top < window.innerHeight;
+
+    floatingWhatsapp.classList.toggle("is-hero-hidden", shouldHide);
+
+    if (shouldHide) {
+      floatingWhatsapp.setAttribute("aria-hidden", "true");
+      floatingWhatsapp.tabIndex = -1;
+    } else {
+      floatingWhatsapp.removeAttribute("aria-hidden");
+      floatingWhatsapp.removeAttribute("tabindex");
+    }
+  };
+
+  const queueFloatingWhatsappSync = () => {
+    if (floatingWhatsappFrame) return;
+
+    floatingWhatsappFrame = window.requestAnimationFrame(() => {
+      syncFloatingWhatsapp();
+      floatingWhatsappFrame = undefined;
+    });
+  };
+
+  syncFloatingWhatsapp();
+  window.addEventListener("scroll", queueFloatingWhatsappSync, { passive: true });
+  window.addEventListener("resize", queueFloatingWhatsappSync);
+}
+
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach((item) => {
