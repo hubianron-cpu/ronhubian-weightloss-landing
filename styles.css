@@ -2789,7 +2789,7 @@ body {
 
 .article-content p,
 .article-content li {
-  color: var(--color-text-muted);
+  color: #d9d9d9;
   font-size: 1.04rem;
 }
 
