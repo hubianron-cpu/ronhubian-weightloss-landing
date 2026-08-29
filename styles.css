@@ -2818,6 +2818,12 @@ body {
   margin-top: 0;
 }
 
+.article-content .article-cta-box .button-primary,
+.article-content .article-cta-box .button-primary:hover,
+.article-content .article-cta-box .button-primary:focus-visible {
+  color: #ffffff;
+}
+
 .article-author,
 .related-articles {
   margin-top: 34px;
