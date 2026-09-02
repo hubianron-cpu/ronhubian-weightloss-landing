@@ -241,6 +241,11 @@ h1 {
 .dark-section p, .product-section p, .offer-section p { color: var(--muted); }
 .quote-heading { margin: 36px auto; color: var(--orange); font-size: clamp(2.4rem, 6vw, 5rem) !important; }
 .section-lead { margin: -5px auto 34px; color: var(--orange) !important; font-size: 1.45rem; font-weight: 800; text-align: center; }
+.product-section > .sales-container > .sales-eyebrow,
+.product-section > .sales-container > h2,
+.product-section > .sales-container > .section-lead { margin-inline: auto; text-align: center; }
+.emergency-section .split-layout > div:first-child h2 { text-align: center; }
+.light-section .strong-copy { color: var(--ink) !important; }
 .product-intro { max-width: 800px; margin: 0 auto 44px; text-align: center; }
 .feature-grid, .include-grid, .bonus-grid, .steps-grid, .method-grid { display: grid; gap: 16px; }
 .feature-grid { grid-template-columns: repeat(5, 1fr); }
