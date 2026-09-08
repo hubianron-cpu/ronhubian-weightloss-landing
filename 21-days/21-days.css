@@ -690,3 +690,40 @@ h1 { font-size: clamp(3rem, 4.8vw, 4.5rem); letter-spacing: -.035em; line-height
   .pv-score-scale li { font-size: .8rem; }
   .pv-guide { padding-inline: 20px; }
 }
+
+/* Hero-only toolkit showcase; other product previews retain their styling. */
+.pv-showcase { padding: 18px; gap: 12px; border: 1px solid #414338; border-radius: 20px; background: #20221d; align-content: start; }
+.pv-showcase .product-sheet { width: 100%; padding: 24px 28px; border: 1px solid #d5cdbc; border-right: 6px solid #b8782b; border-radius: 5px 12px 12px 5px; transform: none; background: #eee8dc; box-shadow: 0 5px 0 #c8bfad; margin-bottom: 8px; }
+.pv-showcase .product-label { font-size: .8rem; font-weight: 600; letter-spacing: 0; }
+.pv-showcase .workbook-title { font-size: .95rem; border-color: #c9bdab; margin-bottom: 22px; padding-bottom: 14px; }
+.pv-showcase .product-sheet strong { font-size: clamp(2.3rem, 3.4vw, 3.15rem); line-height: 1.08; letter-spacing: -.02em; }
+.pv-showcase .product-sheet em { font-size: 1rem; margin-top: 12px; }
+.pv-showcase .pv-workbook-detail { margin-top: 22px; padding: 12px 14px; background: #e4dccd; border: 0; border-radius: 5px; font-size: .85rem; }
+.pv-showcase .pv-workbook-detail b { border-left-color: #c2b49d; }
+.pv-showcase .sheet-lines { display: none; }
+.pv-showcase .pv-hero-kit, .pv-showcase .pv-hero-score { width: 100%; margin: 0; padding: 18px 20px; border: 1px solid #d4cbbc; border-radius: 8px; transform: none; box-shadow: none; background: #f4f0e7; }
+.pv-showcase .pv-hero-kit { border-right: 3px solid #b8782b; }
+.pv-showcase .pv-hero-kit .pv-label { font-size: .75rem; color: #625a4c; }
+.pv-showcase .pv-hero-kit strong { font-size: 1.15rem; margin: 6px 0 12px; }
+.pv-showcase .pv-hero-kit .pv-ruled { display: inline-block; padding: 4px 10px; margin: 0 0 0 6px; border: 1px solid #d2c8b6; border-radius: 4px; font-size: .85rem; background: #ebe5d9; }
+.pv-showcase .pv-hero-kit small { display: none; }
+.pv-showcase .pv-hero-score { background: #2d3227; border-color: #4a5141; color: #e7e6dd; }
+.pv-showcase .pv-hero-score .pv-label { color: #e7e6dd; font-size: .9rem; font-weight: 700; }
+.pv-showcase .pv-mini-scale { gap: 8px; margin: 12px 0 8px; }
+.pv-showcase .pv-mini-scale span { padding: 5px 0; border: 1px solid #737964; border-radius: 5px; color: #f3f0e7; background: #363c2e; font-size: 1.15rem; }
+.pv-showcase .pv-mini-scale span:last-child { color: #251e14; background: #dfb371; border-color: #dfb371; }
+.pv-showcase .pv-hero-score small { display: block; font-size: .85rem; color: #d5d8c9; }
+.pv-showcase > .pv-bridge { width: 100%; padding: 12px 8px 2px; gap: 24px; text-align: center; color: #e7e6dd; }
+.pv-showcase > .pv-bridge b { font-size: 1.65rem; margin-bottom: 4px; }
+.pv-showcase > .pv-bridge i { position: relative; font-size: 1.1rem; }
+.pv-showcase > .preview-caption { margin: 0; padding-top: 4px; font-size: .75rem; color: #bfc1b5; }
+@media (max-width: 800px) {
+  .pv-showcase { max-width: 410px; padding: 12px; gap: 10px; border-radius: 16px; }
+  .pv-showcase .product-sheet { padding: 20px; }
+  .pv-showcase .workbook-title { margin-bottom: 18px; padding-bottom: 12px; }
+  .pv-showcase .product-sheet strong { font-size: 2.4rem; }
+  .pv-showcase .pv-workbook-detail { margin-top: 18px; }
+  .pv-showcase .pv-hero-kit, .pv-showcase .pv-hero-score { padding: 14px 16px; }
+  .pv-showcase .pv-hero-kit .pv-label { font-size: .72rem; }
+  .pv-showcase .pv-hero-kit .pv-ruled { font-size: .8rem; padding-inline: 8px; }
+}
