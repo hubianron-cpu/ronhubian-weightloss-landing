@@ -357,9 +357,9 @@ h1 {
   .sales-container { width: min(calc(100% - 24px), var(--container)); }
   .sales-header { padding-top: 12px; }
   .header-inner { min-height: 64px; gap: 10px; padding: 8px 12px; border-radius: 18px; }
-  .sales-brand { min-width: 0; }
+  .sales-brand { min-width: 0; flex-shrink: 0; }
   .sales-brand img { width: min(138px, 42vw); }
-  .sales-header-cta { min-height: 44px; padding: 8px 15px; font-size: 0.9rem; white-space: nowrap; }
+  .sales-header-cta { min-height: 44px; min-width: 0; padding: 8px 15px; font-size: 0.9rem; white-space: normal; }
   .sales-hero { min-height: auto; padding: 125px 0 70px; }
   h1 { font-size: clamp(2.8rem, 13vw, 4.5rem); }
   .hero-copy h2 { font-size: 1.55rem; }
