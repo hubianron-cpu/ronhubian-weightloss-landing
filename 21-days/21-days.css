@@ -603,3 +603,90 @@ h1 { font-size: clamp(3rem, 4.8vw, 4.5rem); letter-spacing: -.035em; line-height
   .sales-footer { padding-bottom: 100px; }
   html { scroll-padding-bottom: 90px; }
 }
+
+/* Shared document language, scoped to illustrative product materials. */
+.pv-paper, .pv-guide, .pv-composition {
+  --pv-paper: #f4f0e7;
+  --pv-ink: #292c24;
+  --pv-rule: #cfc7b8;
+  --pv-secondary: #655d4f;
+}
+.pv-paper { color: var(--pv-ink); background: var(--pv-paper); border: 1px solid var(--pv-rule); border-radius: 3px 9px 9px 3px; padding: 22px; box-shadow: -4px 5px 0 #d9d2c4; }
+.pv-label { display: block; color: var(--pv-secondary); font-size: .8rem; font-weight: 600; line-height: 1.5; }
+.pv-ruled { display: block; padding-block: 9px; border-bottom: 1px solid var(--pv-rule); font-size: .95rem; }
+.pv-composition { grid-template-columns: 1fr 1fr; column-gap: 16px; padding-top: 28px; }
+.pv-composition .product-sheet { grid-column: 1 / -1; width: calc(100% - 20px); min-height: 0; padding: 22px 28px 42px; transform: rotate(-2deg); }
+.pv-composition .product-label { margin-bottom: 10px; }
+.pv-composition .workbook-title { padding-bottom: 12px; margin-bottom: 16px; }
+.pv-composition .product-sheet strong { font-size: clamp(2.3rem, 3.5vw, 3.15rem); }
+.pv-composition .sheet-lines { gap: 2px; margin-top: 12px; font-size: .85rem; }
+.pv-composition .product-sheet em { margin-top: 12px; }
+.pv-workbook-detail { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin-top: 24px; padding-block: 12px; border-block: 1px solid #b9b2a5; font-size: .85rem; }
+.pv-workbook-detail b { grid-row: span 2; align-self: center; color: var(--accent-ink); padding-left: 12px; border-left: 1px solid #b9b2a5; }
+.pv-hero-kit { grid-column: 1 / -1; justify-self: end; width: 88%; position: relative; margin-top: -20px; z-index: 2; transform: rotate(1deg); padding: 16px 20px; }
+.pv-hero-kit .pv-ruled { display: inline-block; margin-left: 12px; font-size: .85rem; padding-block: 4px; }
+.pv-hero-kit strong { display: block; font-size: 1.2rem; line-height: 1.25; margin-block: 10px; }
+.pv-hero-kit small { display: block; padding-top: 12px; font-size: .85rem; }
+.pv-hero-score { grid-column: 1 / -1; width: 72%; justify-self: start; position: relative; margin-top: -8px; z-index: 3; padding: 16px 20px; }
+.pv-hero-score small { font-size: .85rem; }
+.pv-mini-scale { display: flex; gap: 7px; margin-block: 10px; }
+.pv-mini-scale span { flex: 1; text-align: center; padding-block: 3px; color: var(--pv-ink); border-bottom: 3px solid #a7a393; font-weight: 800; }
+.pv-mini-scale span:nth-child(2) { border-color: #8b886f; }
+.pv-mini-scale span:nth-child(3) { border-color: #696f54; }
+.pv-mini-scale span:nth-child(4) { border-color: #9b5100; }
+.pv-bridge { display: flex; align-items: center; justify-content: center; gap: 18px; padding-block: 18px; font-size: .85rem; }
+.pv-bridge b { font-size: 1.8rem; font-weight: 800; line-height: 1; display: block; }
+.pv-bridge i { font-style: normal; color: #c9a779; }
+.pv-composition > .pv-bridge, .pv-composition > .preview-caption { grid-column: 1 / -1; }
+.pv-composition > .preview-caption { margin-top: 0; }
+.pv-score-sheet { max-width: 530px; margin: 32px auto; }
+.pv-score-scale { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 0; margin: 24px 0; }
+.pv-score-scale li { font-size: .9rem; }
+.pv-score-scale b { display: grid; place-items: center; height: 56px; border: 1px solid #aca696; border-bottom-width: 4px; margin-bottom: 8px; border-radius: 3px; font-size: 1.8rem; font-weight: 700; }
+.pv-score-scale li:nth-child(2) b { background: #e6e1d5; }
+.pv-score-scale li:nth-child(3) b { background: #d6d9ca; }
+.pv-score-scale li:nth-child(4) b { background: #303629; color: #fff; border-color: #303629; border-bottom-color: #f7931a; }
+.pv-score-sheet .pv-score-message { color: var(--pv-ink); font-size: 1rem; font-weight: 700; margin-bottom: 0; }
+.pv-score-sheet .tracker { border: 0; border-top: 1px solid var(--pv-rule); border-radius: 0; box-shadow: none; background: none; padding: 22px 0 0; margin: 22px auto; }
+.pv-guide { background: var(--pv-paper); border-radius: 22px; padding: 28px 24px; border-width: 5px; }
+.pv-guide .pv-label { color: var(--pv-secondary); }
+.pv-guide .pv-guide-title { display: block; font-weight: 800; color: var(--pv-ink); margin-top: 14px; font-size: 1.15rem; }
+.pv-guide strong { font-size: 2.1rem; margin: 20px 0; }
+.pv-guide-outline { display: grid; gap: 0; margin-bottom: 22px; border-top: 1px solid var(--pv-rule); }
+.pv-guide-outline span { padding: 10px 0; border-bottom: 1px solid var(--pv-rule); color: var(--pv-ink); font-weight: 600; font-size: .95rem; }
+.pv-guide li { font-size: .95rem; padding-block: 12px; }
+.pv-next-action { margin-top: 18px; padding: 12px; border-right: 3px solid #9b5100; background: #e3ddcf; font-weight: 700; }
+.pv-fragment { display: grid; gap: 8px; font-size: .95rem; box-shadow: -3px 4px 0 #b6b0a4; min-height: 186px; margin-bottom: 24px; padding: 18px; }
+.pv-fragment i { font-style: normal; color: #9b5100; }
+.pv-fragment b { color: #7a4300; }
+.pv-fragment .pv-ruled { padding-block: 3px; }
+.pv-continuation { width: min(100%, 370px); margin-bottom: 22px; }
+.pv-continuation .pv-bridge { padding-bottom: 0; }
+.pv-continuation .pv-bridge i { color: #9b5100; }
+@media (min-width: 801px) and (max-width: 1100px) {
+  .pv-composition .product-sheet { padding-inline: 20px; }
+  .pv-hero-kit { width: 94%; }
+  .pv-hero-score { width: 88%; }
+  .pv-fragment { padding: 14px; }
+}
+@media (max-width: 800px) {
+  .pv-composition { max-width: 410px; padding: 8px 6px 0; row-gap: 0; }
+  .pv-composition .product-sheet { width: 100%; padding: 24px 24px 40px; transform: none; box-shadow: -4px 5px 0 #c9c1b2; }
+  .pv-composition .product-sheet strong { font-size: 2.5rem; }
+  .pv-composition .product-sheet em { margin-top: 12px; }
+  .pv-composition .sheet-lines { display: none; }
+  .pv-hero-kit small { display: none; }
+  .pv-workbook-detail { margin-top: 18px; }
+  .pv-hero-kit { width: 94%; margin-top: -16px; padding: 16px; transform: none; }
+  .pv-hero-kit .pv-ruled { display: inline-block; margin-left: 12px; font-size: .85rem; padding-block: 4px; }
+  .pv-hero-kit small { padding-top: 8px; }
+  .pv-hero-score { width: 88%; margin-top: 12px; padding: 12px 16px; }
+  .pv-bridge { padding-block: 16px; }
+  .pv-fragment { min-height: 0; }
+}
+@media (max-width: 430px) {
+  .pv-score-sheet { padding: 18px 14px; }
+  .pv-score-scale { gap: 6px; }
+  .pv-score-scale li { font-size: .8rem; }
+  .pv-guide { padding-inline: 20px; }
+}
