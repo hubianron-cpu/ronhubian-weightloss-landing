@@ -14,15 +14,26 @@
   };
 
   document.querySelectorAll("[data-purchase-cta]").forEach((link) => {
-    if (purchaseUrl) {
-      link.href = purchaseUrl;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    } else {
-      link.href = "#offer";
-      link.addEventListener("click", () => track("purchase_link_missing_fallback"));
-    }
-  });
+  if (purchaseUrl) {
+    link.href = purchaseUrl;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+
+    link.addEventListener("click", () => {
+      if (typeof window.fbq === "function") {
+        window.fbq("track", "InitiateCheckout", {
+          value: 197,
+          currency: "ILS"
+        });
+      }
+    });
+  } else {
+    link.href = "#offer";
+    link.addEventListener("click", () =>
+      track("purchase_link_missing_fallback")
+    );
+  }
+});
 
   document.querySelectorAll("[data-track]").forEach((element) => {
     element.addEventListener("click", () => track(element.dataset.track));
