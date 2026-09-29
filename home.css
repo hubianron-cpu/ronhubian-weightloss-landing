@@ -213,7 +213,7 @@ figure { margin: 0; }
   .guarantee-card { gap: 28px; }
   .terms-box { padding: 22px; }
   .guarantee-cta .button, .final-cta .button { width: 100%; }
-  .about-photo-wrap { max-width: 360px; }
+  .about-photo-wrap { max-width: 360px; margin-inline: auto; }
   .scarcity-card, .final-cta-inner { text-align: start; }
   .scarcity-points { justify-content: start; }
   .faq-question { padding-block: 22px; font-size: 1.08rem; gap: 16px; }
